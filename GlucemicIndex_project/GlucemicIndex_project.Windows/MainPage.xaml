@@ -1,0 +1,204 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GlucemicIndex_project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.WinRT.UI"
+    x:Class="GlucemicIndex_project.MainPage"
+    mc:Ignorable="d">
+
+    <Page.Resources>
+        <Style x:Key="MainTitle" TargetType="TextBlock">
+            <Setter Property="FontSize" Value="70"/>
+            <Setter Property="Margin" Value="60,20,0,0"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Setter Property="Height" Value="120"/>
+        </Style>
+        <Style x:Key="border_quad" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+        <Style x:Key="button_quad" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="Height" Value="180"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="stack_quad" TargetType="StackPanel">
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style x:Key="text_quad" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="img_quad" TargetType="Image">
+            <Setter Property="Width" Value="200"/>
+            <Setter Property="Height" Value="160"/>
+        </Style>
+
+
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush   ImageSource="/Assets/background.png"
+				Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid  Grid.Row="0">
+            <TextBlock Text="Indice Glucémico" Style="{StaticResource MainTitle}"/>
+        </Grid>
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="50"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="200"/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text="Categoria &gt;" Grid.Row="0" FontSize="30" Foreground="Black" Margin="80,15,0,0"/>
+            <Grid Grid.Row="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition  Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition  Width="240" />
+                    <ColumnDefinition  Width="240"/>
+
+                </Grid.ColumnDefinitions>
+
+                <Button x:Name="b_fruits" Click="onClick" Margin="50,0,0,0" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid>
+                            <Image Source="/Assets/fruits_vegetables.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Frutas y verduras"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+
+                <Button x:Name="b_cereals"  Click="onClick" Margin="50,0,0,0" Grid.Row="1" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid >
+                            <Image Source="/Assets/cereals_grains.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Cereales y granos"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+
+                <Button x:Name="b_meat" Click="onClick" Margin="50,0,0,0" Grid.Row="2" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid >
+                            <Image Source="/Assets/meat_fish.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Carnes, pescados y huevos"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+                <Button x:Name="b_candies" Click="onClick" Grid.Column="1" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid >
+                            <Image  Source="/Assets/sugar_sweet.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Azúcar y dulces"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+
+                <Button x:Name="b_milk" Click="onClick" Grid.Column="1" Grid.Row="1" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid >
+                            <Image  Source="/Assets/milk.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Leche y derivados"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+
+                <Button x:Name="b_drinks" Click="onClick" Grid.Column="1" Grid.Row="2" Style="{StaticResource button_quad}">
+                    <Border Style="{StaticResource border_quad}">
+                        <Grid >
+                            <Image  Source="/Assets/drinks.png" Style="{StaticResource img_quad}"/>
+                            <StackPanel Style="{StaticResource stack_quad}">
+                                <TextBlock Style="{StaticResource text_quad}" Text="Bebidas y refrescos"/>
+                            </StackPanel>
+                        </Grid>
+                    </Border>
+                </Button>
+            </Grid>
+            <TextBlock Text="Niveles &gt;" Grid.Row="0" Grid.Column="1" FontSize="30" Foreground="Black" Margin="50,15,0,0"/>
+            
+            <Grid Grid.Column="1" Grid.Row="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Button x:Name="b_high" Click="onClick"  Height="120" Width="250" Background="Transparent">
+                    <Grid Background="Red" Width="200" Height="100">
+                        <StackPanel Style="{StaticResource stack_quad}">
+                            <TextBlock Style="{StaticResource text_quad}" Text="Alto"/>
+                        </StackPanel>
+                    </Grid>
+                </Button>
+                <Button x:Name="b_medium" Click="onClick" Grid.Row="1"  Height="120" Width="250" Background="Transparent">
+                    <Grid Background="Yellow" Width="200" Height="100">
+                        <StackPanel Style="{StaticResource stack_quad}">
+                            <TextBlock Style="{StaticResource text_quad}" Text="Medio"/>
+                        </StackPanel>
+                    </Grid>
+                </Button>
+                <Button x:Name="b_low" Click="onClick" Grid.Row="2"  Height="120" Width="250" Background="Transparent">
+                    <Grid Background="Green" Width="200" Height="100">
+                        <StackPanel Style="{StaticResource stack_quad}">
+                            <TextBlock Style="{StaticResource text_quad}" Text="Bajo"/>
+                        </StackPanel>
+                    </Grid>
+                </Button>
+            </Grid>
+            <Grid Grid.Row="2" Grid.Column="2">
+                <UI:AdControl ApplicationId="49ded290-b591-4e09-83b2-8676dce4afb9" AdUnitId="181897" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="160"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="2" VerticalAlignment="Center" Width="800">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="720"/>
+                <ColumnDefinition Width="80"/>
+            </Grid.ColumnDefinitions>
+
+            <TextBox  x:Name="search_text" VerticalContentAlignment="Center" HorizontalContentAlignment="Right" Background="White" FontSize="32" HorizontalAlignment="Left" Grid.Column="0" Width="720" BorderBrush="#4DAEEE" VerticalAlignment="Center" Foreground="Black" Height="65"/>
+            <Button Click="onClick"  x:Name="b_search" Width="73"  Height="73" BorderThickness="0"  BorderBrush="Transparent" Grid.Column="1">
+                <Button.Background>
+                    <ImageBrush   ImageSource="/Assets/zoom.png"
+						Stretch="UniformToFill" />
+                </Button.Background>
+            </Button>
+        </Grid>
+    </Grid>
+</Page>

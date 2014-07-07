@@ -1,0 +1,213 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GlucemicIndex_project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
+    x:Class="GlucemicIndex_project.MainPage"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.Resources>
+
+        <Style x:Key="border_quad_phone" TargetType="Border">
+            <Setter Property="BorderBrush" Value="Gray"/>
+            <Setter Property="BorderThickness" Value="3"/>
+        </Style>
+        <Style x:Key="button_quad_phone" TargetType="Button">
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="Width" Value="190"/>
+            <Setter Property="Margin" Value="0"/>
+            <Setter Property="BorderThickness" Value="0"/>
+            <Setter Property="Height" Value="100"/>
+            <Setter Property="BorderBrush" Value="Transparent"/>
+            <Setter Property="HorizontalAlignment" Value="Center"/>
+        </Style>
+        <Style x:Key="stack_quad_phone" TargetType="StackPanel">
+            <Setter Property="Height" Value="28"/>
+            <Setter Property="Background" Value="Gray"/>
+            <Setter Property="VerticalAlignment" Value="Bottom"/>
+        </Style>
+        <Style x:Key="text_quad_phone" TargetType="TextBlock">
+            <Setter Property="Foreground" Value="white"/>
+            <Setter Property="Height" Value="40"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Width" Value="150"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="TextWrapping" Value="Wrap"/>
+        </Style>
+        <Style x:Key="img_quad_phone" TargetType="Image">
+            <Setter Property="Width" Value="180"/>
+            <Setter Property="Height" Value="70"/>
+            <Setter Property="Stretch" Value="UniformToFill"/>
+        </Style>
+    </Page.Resources>
+    <Grid>
+        <Grid.Background>
+            <ImageBrush   ImageSource="/Assets/background.png"
+				Stretch="UniformToFill" />
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#4DAEEE">
+            <TextBlock   FontSize="27" Foreground="White">
+				<Run Text="Indice glucémico"/>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="1" Margin="10,0,10,0" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="70*"/>
+                <ColumnDefinition  Width="30*"/>
+            </Grid.ColumnDefinitions>
+            <TextBox  x:Name="search_text" Grid.Column="0" Height="45" Width="280"  Background="White"  FontSize="25"  BorderBrush="#4DAEEE" Foreground="Black" />
+            <Button  Click="onClick"  x:Name="b_search"  BorderBrush="#4DAEEE" Margin="0,-2,0,0"  Background="#4DAEEE" Grid.Column="1" Height="65" VerticalAlignment="Center" VerticalContentAlignment="Center" Content="Buscar"/>
+        </Grid>
+
+        <Grid Grid.Row="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition  Width="50*"/>
+                <ColumnDefinition  Width="50*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="*"/>
+
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Row="0" Margin="15,0,0,0" Foreground="Black" Height="30" FontSize="25">
+					<Run Text="&gt;Categoría"/>
+                </TextBlock>
+                <ScrollViewer Grid.Row="1">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                            <RowDefinition Height="20*"/>
+                        </Grid.RowDefinitions>
+                        <Button Click="onClick" x:Name="b_fruits" Grid.Row="0" Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid>
+                                    <Image Source="/Assets/fruits_vegetables.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Frutas y verduras"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+                        <Button Click="onClick" x:Name="b_cereals" Grid.Row="1" Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid >
+                                    <Image Source="/Assets/cereals_grains.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Cereales y granos"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+                        <Button Click="onClick" x:Name="b_meat" Grid.Row="2" Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid >
+                                    <Image Source="/Assets/meat_fish.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Carnes y pescados"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+                        <Button Click="onClick"  x:Name="b_candies" Grid.Row="3"  Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid >
+                                    <Image  Source="/Assets/sugar_sweet.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Azúcar y dulces"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+
+                        <Button Click="onClick" x:Name="b_milk"  Grid.Row="4" Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid >
+                                    <Image  Source="/Assets/milk.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Leche y derivados"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+
+                        <Button Click="onClick" x:Name="b_drinks"  Grid.Row="5" Style="{StaticResource button_quad_phone}">
+                            <Border Style="{StaticResource border_quad_phone}">
+                                <Grid >
+                                    <Image  Source="/Assets/drinks.png" Style="{StaticResource img_quad_phone}"/>
+                                    <StackPanel Style="{StaticResource stack_quad_phone}">
+                                        <TextBlock Style="{StaticResource text_quad_phone}" Text="Bebidas"/>
+                                    </StackPanel>
+                                </Grid>
+                            </Border>
+                        </Button>
+                    </Grid>
+                </ScrollViewer>
+            </Grid>
+
+            <Grid Grid.Column="1" Margin="0,0,0,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="30"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <TextBlock Margin="15,0,0,0" Foreground="Black" Height="30" FontSize="25">
+					<Run Text="&gt;Niveles"/>
+                </TextBlock>
+                <Button Click="onClick"   x:Name="b_high" Grid.Row="1" Style="{StaticResource button_quad_phone}">
+                    <Border Style="{StaticResource border_quad_phone}">
+                        <Grid >
+                            <Grid Height="70" Width="170" Background="Red">
+                                <StackPanel Style="{StaticResource stack_quad_phone}">
+                                    <TextBlock Style="{StaticResource text_quad_phone}" Text="Alto"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Button>
+                <Button Click="onClick"  x:Name="b_medium" Grid.Row="2" Style="{StaticResource button_quad_phone}">
+                    <Border Style="{StaticResource border_quad_phone}">
+                        <Grid >
+                            <Grid Height="70" Width="170" Background="Yellow">
+                                <StackPanel Style="{StaticResource stack_quad_phone}">
+                                    <TextBlock Style="{StaticResource text_quad_phone}" Text="Medio"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Button>
+                <Button Click="onClick" x:Name="b_low" Grid.Row="3" Style="{StaticResource button_quad_phone}">
+                    <Border Style="{StaticResource border_quad_phone}">
+                        <Grid >
+                            <Grid Height="70" Width="170" Background="Green">
+                                <StackPanel Style="{StaticResource stack_quad_phone}">
+                                    <TextBlock Style="{StaticResource text_quad_phone}" Text="Bajo"/>
+                                </StackPanel>
+                            </Grid>
+                        </Grid>
+                    </Border>
+                </Button>
+            </Grid>
+        </Grid>
+        <Grid  x:Name="ContentPanel" Grid.Row="3">
+            <UI:AdControl AutoRefreshIntervalInSeconds="60" ApplicationId="81b93a17-ab2e-4de0-b2ca-ad509ebe4c2d" AdUnitId="181896" Height="50" IsAutoRefreshEnabled="True" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="320"/>
+        </Grid>
+    </Grid>
+
+</Page>
