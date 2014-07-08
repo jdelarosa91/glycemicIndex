@@ -1,2 +1,2 @@
-MainPackage=C:\Users\Javier\Dropbox\GlucemicIndex\GlucemicIndex_project\GlucemicIndex_project\GlucemicIndex_project.Windows\bin\x64\Release\GlucemicIndex_project.Windows_1.1.0.2_Bundle\GlucemicIndex_project.Windows_1.1.0.2_x64.appx
-SymbolPackage=C:\Users\Javier\Dropbox\GlucemicIndex\GlucemicIndex_project\GlucemicIndex_project\GlucemicIndex_project.Windows\AppPackages\GlucemicIndex_project.Windows_1.1.0.2_Test\GlucemicIndex_project.Windows_1.1.0.2_x64.appxsym
+MainPackage=C:\Users\Javier\Dropbox\GlucemicIndex\GlucemicIndex_project\GlucemicIndex_project\GlucemicIndex_project.Windows\bin\x64\Release\GlucemicIndex_project.Windows_1.1.0.0_Bundle\GlucemicIndex_project.Windows_1.1.0.0_x64.appx
+SymbolPackage=C:\Users\Javier\Dropbox\GlucemicIndex\GlucemicIndex_project\GlucemicIndex_project\GlucemicIndex_project.Windows\AppPackages\GlucemicIndex_project.Windows_1.1.0.0_Test\GlucemicIndex_project.Windows_1.1.0.0_x64.appxsym
