@@ -52,7 +52,7 @@
             <RowDefinition Height="35"/>
             <RowDefinition Height="65"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="70"/>
+            <RowDefinition Height="55"/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0" Background="#4DAEEE">
             <TextBlock   FontSize="27" Foreground="White">
@@ -205,8 +205,8 @@
                 </Button>
             </Grid>
         </Grid>
-        <Grid  x:Name="ContentPanel" Grid.Row="3">
-            <UI:AdControl AutoRefreshIntervalInSeconds="60" ApplicationId="81b93a17-ab2e-4de0-b2ca-ad509ebe4c2d" AdUnitId="181896" Height="50" IsAutoRefreshEnabled="True" Grid.Row="3" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="320"/>
+        <Grid Grid.Row="3">
+            <UI:AdControl ApplicationId="81b93a17-ab2e-4de0-b2ca-ad509ebe4c2d" AdUnitId="181896" HorizontalAlignment="Center" Height="50" VerticalAlignment="Bottom" Width="320"/>
         </Grid>
     </Grid>
 

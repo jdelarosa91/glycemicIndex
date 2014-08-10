@@ -5,6 +5,7 @@
     xmlns:local="using:GlucemicIndex_project"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:UI="using:Microsoft.Advertising.Mobile.UI"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
     <Page.Resources>
@@ -62,6 +63,7 @@
             <Grid.RowDefinitions>
                 <RowDefinition Height="35"/>
                 <RowDefinition Height="*"/>
+                <RowDefinition Height="55"/>
             </Grid.RowDefinitions>
             <TextBlock Grid.Row="0" Foreground="Black" FontSize="25" Margin="10,0,0,0"> >Alimentos</TextBlock>
             <ScrollViewer Grid.Row="1">
@@ -82,7 +84,12 @@
                     </GridView.ItemTemplate>                 
                 </GridView>
             </ScrollViewer>
+            <Grid Grid.Row="2">
+                <UI:AdControl AutoRefreshIntervalInSeconds="60" ApplicationId="81b93a17-ab2e-4de0-b2ca-ad509ebe4c2d" AdUnitId="181896" HorizontalAlignment="Center" Height="50" IsAutoRefreshEnabled="True"  VerticalAlignment="Bottom" Width="320"/>
+
+            </Grid>
         </Grid>
+        
     </Grid>
 </Page>
 
