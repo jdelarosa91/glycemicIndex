@@ -1,0 +1,70 @@
+﻿<Page
+    x:Class="GlucemicIndex_project.NewCustomFood"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:GlucemicIndex_project"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush   ImageSource="/Assets/background.png"
+				Stretch="UniformToFill" />
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="50"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="#4DAEEE">
+            <TextBlock   FontSize="27" Foreground="White">
+				<Run Text="Indice glucémico"/>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="1"  Margin="10,20,0,0">
+            <TextBlock   FontSize="20" Foreground="#4DAEEE">
+				<Run Text="Nombre del alimento: "/>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="2"  Margin="10,0,10,0">
+            <TextBox  x:Name="food_name" Height="35" Width="auto"  Background="White"  FontSize="20"  BorderBrush="#4DAEEE" Foreground="Black" />
+        </Grid>
+        <Grid Grid.Row="3"  Margin="10,0,0,0">
+            <TextBlock   FontSize="20" Foreground="#4DAEEE">
+				<Run Text="Indice glucémico: "/>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="4"  Margin="10,0,10,0">
+            <TextBox  x:Name="food_ig" Height="35" Width="100" HorizontalAlignment="Left"  Background="White"  FontSize="20"  BorderBrush="#4DAEEE" Foreground="Black" InputScope="Number"  />
+        </Grid>
+        <Grid Grid.Row="5"  Margin="10,0,0,0">
+            <TextBlock   FontSize="20" Foreground="#4DAEEE">
+				<Run Text="Categoría: "/>
+            </TextBlock>
+        </Grid>
+        <Grid Grid.Row="6"  Margin="10,0,10,0">
+            <ComboBox x:Name="comboBox1" SelectionChanged="ComboBox_SelectionChanged" Width="auto" Background="White"  BorderBrush="#4DAEEE">
+                <ComboBox.Header>Categoría</ComboBox.Header>
+                <ComboBox.Foreground>Black</ComboBox.Foreground>
+                <ComboBox.Items>
+                    <ComboBoxItem>Item1</ComboBoxItem>
+                    <ComboBoxItem>Item1</ComboBoxItem>
+                    <ComboBoxItem>Item1</ComboBoxItem>
+                    <ComboBoxItem>Item1</ComboBoxItem>
+                </ComboBox.Items>       
+            </ComboBox>
+        </Grid>
+        <Grid Grid.Row="7"  Margin="20,0,20,0">
+            <Button  x:Name="b_back" Foreground="#4DAEEE"  BorderBrush="#4DAEEE" Margin="0,-2,0,0"  Background="white" Grid.Column="1" Width="150" Height="50" VerticalAlignment="Bottom"  HorizontalAlignment="Left" VerticalContentAlignment="Center" Content="Atrás"/>
+            <Button  x:Name="b_save"  BorderBrush="#4DAEEE" Margin="0,-2,0,0"  Background="#4DAEEE" Grid.Column="1" Width="150" Height="50" VerticalAlignment="Bottom"  HorizontalAlignment="Right" VerticalContentAlignment="Center" Content="Guardar"/>
+        </Grid>
+    </Grid>
+</Page>

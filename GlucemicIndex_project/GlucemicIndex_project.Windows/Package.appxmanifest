@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest">
-  <Identity Name="53963Mosh.Indiceglucemico" Publisher="CN=1D3AF111-2953-4DFE-B3A1-356C1098CA90" Version="1.1.0.6" />
+  <Identity Name="53963Mosh.Indiceglucemico" Publisher="CN=1D3AF111-2953-4DFE-B3A1-356C1098CA90" Version="1.1.0.7" />
   <Properties>
     <DisplayName>Indice glucemico</DisplayName>
     <PublisherDisplayName>Mosh</PublisherDisplayName>
@@ -15,7 +15,7 @@
   </Resources>
   <Applications>
     <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="Indice_glucemico.Windows.App">
-      <m2:VisualElements DisplayName="Indice_glucemico.Windows" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="GlucemicIndex_project.Windows" ForegroundText="light" BackgroundColor="#000000" ToastCapable="false">
+      <m2:VisualElements DisplayName="Indice glucémico" Square150x150Logo="Assets\Square150x150Logo.png" Square30x30Logo="Assets\Square30x30Logo.png" Description="New version" ForegroundText="light" BackgroundColor="#000000" ToastCapable="false">
         <m2:DefaultTile ShortName="Indice glucemico" Wide310x150Logo="Assets\Wide310x150Logo.png" Square70x70Logo="Assets\Square70x70Logo.png" Square310x310Logo="Assets\Square310x310Logo.png">
           <m2:ShowNameOnTiles>
             <m2:ShowOn Tile="square150x150Logo" />

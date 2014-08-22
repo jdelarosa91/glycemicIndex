@@ -83,6 +83,9 @@ namespace GlucemicIndex_project
             this.Frame.Navigate(typeof(ViewFood), type);
         }
 
-       
+        private void onClickAppBar(object sender, Windows.UI.Xaml.RoutedEventArgs e)
+        {
+            this.Frame.Navigate(typeof(NewCustomFood));
+        }
     }
 }

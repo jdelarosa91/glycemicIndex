@@ -93,6 +93,20 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
+                Name = "Chocolate negro (>70% cacao)",
+                Type = "candies",
+                Ig = 25,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Chocolate negro (>80% cacao)",
+                Type = "candies",
+                Ig = 20,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
                 Name = "Cereales refinados (con azucar)",
                 Type = "candies",
                 Ig = 70,
@@ -107,7 +121,7 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
-                Name = "Confitura",
+                Name = "Confitura, mermelada",
                 Type = "candies",
                 Ig = 65,
                 Color = "Red"
@@ -117,6 +131,14 @@ namespace GlucemicIndex_project.Controller
                 Name = "Muesli (con miel o azucar)",
                 Type = "candies",
                 Ig = 65,
+                Color = "Red"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Miel",
+                Type = "candies",
+                Ig = 60,
                 Color = "Red"
             });
 
@@ -206,10 +228,17 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
-                Name = "Membrillo",
+                Name = "Membrillo (con azúcar)",
                 Type = "candies",
                 Ig = 65,
                 Color = "Red"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Membrillo (sin azúcar)",
+                Type = "candies",
+                Ig = 45,
+                Color = "#FFCC00"
             });
             db.Insert(new Food_db()
             {
@@ -243,6 +272,7 @@ namespace GlucemicIndex_project.Controller
                 Ig = 35,
                 Color = "Green"
             });
+           
             db.Insert(new Food_db()
             {
                 Name = "Zanahoria (zumo)",
@@ -316,6 +346,22 @@ namespace GlucemicIndex_project.Controller
 
             db.Insert(new Food_db()
             {
+                Name = "Café",
+                Type = "drinks",
+                Ig = 0,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Té",
+                Type = "drinks",
+                Ig = 0,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
                 Name = "Cerveza",
                 Type = "drinks",
                 Ig = 110,
@@ -333,6 +379,30 @@ namespace GlucemicIndex_project.Controller
                 Name = "Bebidas alcoholicas (destiladas)",
                 Type = "drinks",
                 Ig = 0,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Almendra",
+                Type = "cereals",
+                Ig = 15,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Altramuz",
+                Type = "cereals",
+                Ig = 15,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Avellana",
+                Type = "cereals",
+                Ig = 25,
                 Color = "Green"
             });
         }
@@ -353,7 +423,13 @@ namespace GlucemicIndex_project.Controller
                 Ig = 0,
                 Color = "Green"
             });
-
+            db.Insert(new Food_db()
+            {
+                Name = "Crustáceos",
+                Type = "meat",
+                Ig = 5,
+                Color = "Green"
+            });
             db.Insert(new Food_db()
             {
                 Name = "Huevos",
@@ -598,6 +674,27 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
+                Name = "Hummus (puré de garbanzos)",
+                Type = "cereals",
+                Ig = 25,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Habas (cocidas)",
+                Type = "cereals",
+                Ig = 65,
+                Color = "Red"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Habas (crudas)",
+                Type = "cereals",
+                Ig = 40,
+                Color = "#FFCC00"
+            });
+            db.Insert(new Food_db()
+            {
                 Name = "Guisantes (frescos)",
                 Type = "cereals",
                 Ig = 35,
@@ -623,6 +720,19 @@ namespace GlucemicIndex_project.Controller
                 Type = "cereals",
                 Ig = 50,
                 Color = "#FFCC00"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Cuscús integral",
+                Type = "cereals",
+                Ig = 45,
+                Color = "#FFCC00"
+            }); db.Insert(new Food_db()
+            {
+                Name = "Cuscús integral",
+                Type = "cereals",
+                Ig = 60,
+                Color = "Red"
             });
             db.Insert(new Food_db()
             {
@@ -744,6 +854,32 @@ namespace GlucemicIndex_project.Controller
         {
             db.Insert(new Food_db()
             {
+                Name = "Aceitununa",
+                Type = "fruits",
+                Ig = 15,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Aguacate",
+                Type = "fruits",
+                Ig = 10,
+                Color = "Green"
+            });
+
+
+
+            db.Insert(new Food_db()
+            {
+                Name = "Acerola",
+                Type = "fruits",
+                Ig = 20,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
                 Name = "Manzana (fruta)",
                 Type = "fruits",
                 Ig = 35,
@@ -754,6 +890,21 @@ namespace GlucemicIndex_project.Controller
                 Name = "Pera (fruta)",
                 Type = "fruits",
                 Ig = 30,
+                Color = "Green"
+            });
+
+            db.Insert(new Food_db()
+            {
+                Name = "Espárragos",
+                Type = "fruits",
+                Ig = 15,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Chile, Chili (pimiento picante)",
+                Type = "fruits",
+                Ig = 15,
                 Color = "Green"
             });
             db.Insert(new Food_db()
@@ -912,6 +1063,13 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
+                Name = "Maracuyá (fruta)",
+                Type = "fruits",
+                Ig = 30,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
                 Name = "Pasa (fruta)",
                 Type = "fruits",
                 Ig = 40,
@@ -1045,6 +1203,13 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
+                Name = "Especia: perejil, oregano...",
+                Type = "fruits",
+                Ig = 5,
+                Color = "Green"
+            });
+            db.Insert(new Food_db()
+            {
                 Name = "Judias verdes",
                 Type = "fruits",
                 Ig = 30,
@@ -1143,9 +1308,23 @@ namespace GlucemicIndex_project.Controller
             });
             db.Insert(new Food_db()
             {
+                Name = "Mostaza (salsa)",
+                Type = "drinks",
+                Ig = 55,
+                Color = "#FFCC00"
+            });
+            db.Insert(new Food_db()
+            {
                 Name = "Tomate frito (salsa)",
                 Type = "fruits",
                 Ig = 45,
+                Color = "#FFCC00"
+            });
+            db.Insert(new Food_db()
+            {
+                Name = "Ketchup (salsa)",
+                Type = "fruits",
+                Ig = 55,
                 Color = "#FFCC00"
             });
             db.Insert(new Food_db()

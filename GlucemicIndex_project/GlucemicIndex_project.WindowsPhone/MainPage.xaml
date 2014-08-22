@@ -8,6 +8,13 @@
     x:Class="GlucemicIndex_project.MainPage"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.BottomAppBar>
+        <CommandBar IsSticky="false" x:Name="appBar">
+            <CommandBar.PrimaryCommands>
+                <AppBarButton Click="onClickAppBar" Name="b_new_food" Icon="Add" IsCompact="true" Label="Alimento"/>
+            </CommandBar.PrimaryCommands>   
+        </CommandBar>
+    </Page.BottomAppBar>
     <Page.Resources>
 
         <Style x:Key="border_quad_phone" TargetType="Border">

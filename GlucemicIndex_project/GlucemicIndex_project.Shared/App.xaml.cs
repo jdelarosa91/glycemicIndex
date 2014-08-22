@@ -26,7 +26,7 @@ namespace GlucemicIndex_project
     public sealed partial class App : Application
     {
         DatabaseController db;
-        private const int DATABASE_VERSION = 1;
+        private const int DATABASE_VERSION = 2;
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif

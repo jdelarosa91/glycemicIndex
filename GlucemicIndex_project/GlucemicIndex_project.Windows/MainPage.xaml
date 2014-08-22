@@ -183,7 +183,7 @@
                 </Button>
             </Grid>
             <Grid Grid.Row="2" Grid.Column="2">
-                <UI:AdControl ApplicationId="49ded290-b591-4e09-83b2-8676dce4afb9" AdUnitId="181897" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="160"/>
+                <UI:AdControl ApplicationId="49ded290-b591-4e09-83b2-8676dce4afb9" AdUnitId="181897" HorizontalAlignment="Left" Height="600" VerticalAlignment="Top" Width="160"/>          
             </Grid>
         </Grid>
         <Grid Grid.Row="2" VerticalAlignment="Center" Width="800">
